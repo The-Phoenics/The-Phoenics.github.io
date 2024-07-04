@@ -16,7 +16,7 @@ function ProjectImgSection({ projectImageUrl }) {
           />
         </div>
       </div>
-      <img src="/gradient.png" className="absolute scale-[1.1] -top-[180px] right-14" />
+      <img src="/assets/gradient.png" className="absolute scale-[1.1] -top-[180px] right-14" />
     </div>
   );
 }
@@ -85,7 +85,7 @@ function Project({ project, index }) {
 function Projects() {
   return (
     <div className="flex text-white justify-center w-full bg-[#11071F]">
-      <div className="flex flex-col gap-[400px] justify-center items-center  w-full h-full">
+      <div className="flex flex-col gap-[400px] justify-center items-center  w-full">
         {projectsConfig.data.map((project, index) => {
           return <Project project={project} index={index} key={index} />;
         })}

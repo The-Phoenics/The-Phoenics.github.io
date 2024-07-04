@@ -8,12 +8,12 @@ function Home() {
         <div className="w-full flex items-center gap-12">
           <div className="max-w-[250px] relative w-full mr-4">
             <img
-              src="/avatar.png"
+              src="/assets/avatar.png"
               alt="avatar image"
               className="rounded-[50%] z-30 w-full aspect-square absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             />
             <img
-              src="/lgGrad.png"
+              src="/assets/lgGrad.png"
               alt=""
               className="min-w-[450px] min-h-[480px]  rounded-[50%] z-12 w-full aspect-square absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
             />
@@ -21,7 +21,7 @@ function Home() {
             <h1 className="w-full font-Preahvihear absolute left-[320px] text-xl top-[-180px]">
               <div className="relative">
                 <img
-                  src="/arrow.png"
+                  src="/assets/arrow.png"
                   className="absolute scale-[1.2] top-[-16px] left-0 -translate-x-[95%]"
                 />
               </div>

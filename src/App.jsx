@@ -2,7 +2,6 @@ import "./App.css";
 import Home from "./components/Home";
 import Skills from "./components/Skills"
 import Projects from "./components/Projects";
-import About from "./components/About";
 import Navbar from "./components/Navbar";
 
 function App() {
