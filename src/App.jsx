@@ -11,7 +11,7 @@ function App() {
 
       {/* background image section */}
       <div className="w-screen h-screen top-0 left-0 sticky">
-        <img src="/sky.jpg" alt="" className="w-full h-full object-cover" />
+        <img src="/assets/sky.jpg" alt="" className="w-full h-full object-cover" />
       </div>
 
       <div className="w-full absolute top-0 left-0  h-screen">
