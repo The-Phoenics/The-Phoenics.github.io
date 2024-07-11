@@ -2,7 +2,7 @@ import React from "react";
 
 function Home() {
   return (
-    <div className="w-screen h-full z-20 flex justify-center bg-[#11071FEf] text-white">
+    <div id="home" className="w-screen h-full z-20 flex justify-center bg-homeLinearGradient text-white">
       <div className="flex flex-col max-w-[1000px] tracking-wider gap-[15vh] w-full h-full items-center justify-center">
         {/* above section */}
         <div className="w-full flex items-center gap-12">

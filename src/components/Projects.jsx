@@ -26,7 +26,7 @@ function Project({ project, index }) {
 
   return (
     <div className="max-w-[1200px] w-full flex justify-center">
-      <div className="flex mt-[10vh] w-full">
+      <div className="flex mt-[2vh] w-full">
         {!isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} /> : ""}
 
         <div className="w-full relative mt-10">
@@ -84,8 +84,8 @@ function Project({ project, index }) {
 
 function Projects() {
   return (
-    <div className="flex text-white justify-center w-full bg-[#11071F]">
-      <div className="flex flex-col gap-[400px] justify-center items-center  w-full">
+    <div id="projects" className="flex text-white pt-2 min-h-[2400px] justify-center w-full bg-[#11071F]">
+      <div className="flex flex-col gap-[500px] justify-center items-center w-full">
         {projectsConfig.data.map((project, index) => {
           return <Project project={project} index={index} key={index} />;
         })}

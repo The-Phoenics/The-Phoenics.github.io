@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./components/Home";
-import Skills from "./components/Skills"
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Navbar from "./components/Navbar";
 
@@ -10,12 +10,12 @@ function App() {
       <Navbar />
 
       {/* background image section */}
-      <div className="w-screen h-screen top-0 left-0 sticky">
+      <div className="w-screen h-full top-0 left-0 fixed border">
         <img src="/assets/sky.jpg" alt="" className="w-full h-full object-cover" />
       </div>
 
       <div className="w-full absolute top-0 left-0  h-screen">
-        <Home/>
+        <Home />
         <Skills />
         <Projects />
       </div>
