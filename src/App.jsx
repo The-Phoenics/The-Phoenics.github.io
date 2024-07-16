@@ -14,7 +14,7 @@ function App() {
         <img src="/assets/sky.jpg" alt="" className="w-full h-full object-cover" />
       </div>
 
-      <div className="w-full absolute top-0 left-0  h-screen">
+      <div className="w-full absolute top-0 left-0  h-screen  overflow-x-hidden">
         <Home />
         <Skills />
         <Projects />

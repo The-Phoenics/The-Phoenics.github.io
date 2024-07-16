@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdGlobe } from "react-icons/io";
 import { Link } from "react-router-dom";
 import projectsConfig from "../config/projectsConfig.json";
+import {  motion, useAnimation, useInView } from "framer-motion";
 
 function ProjectImgSection({ projectImageUrl }) {
   return (
@@ -16,20 +17,43 @@ function ProjectImgSection({ projectImageUrl }) {
           />
         </div>
       </div>
-      <img src="/assets/gradient.png" className="absolute scale-[1.1] -top-[180px] right-14" />
+      <img src="/assets/gradient.png" className="absolute scale-[1] -top-[170px] right-20" />
     </div>
   );
 }
 
 function Project({ project, index }) {
   const isEven = index % 2 === 0;
+  const projectRef = useRef(null);
+  const isInView = useInView(projectRef);
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    } else {
+      mainControls.start("hidden");
+    }
+  }, [isInView])
 
   return (
-    <div className="max-w-[1200px] w-full flex justify-center">
-      <div className="flex mt-[2vh] w-full">
+    <motion.div
+      ref={projectRef}
+      className="max-w-[1400px] w-full flex justify-center"
+      variants={{
+        hidden: { opacity: 0, y: 0 },
+        visible: { opacity: 1, y: -60 },
+      }}
+      initial="hidden"
+      animate={mainControls}
+      transition={{
+        duration: 1
+      }}
+    >
+      <div className="flex mt-[0vh] w-full">
         {!isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} /> : ""}
 
-        <div className="w-full relative mt-10">
+        <div className="w-full relative mt-20">
           <div className={`${!isEven ? "" : ""}`}>
             <h2
               className={`font-Poppins text-[#9857D3] font-medium text-[1.1em] ${
@@ -72,19 +96,18 @@ function Project({ project, index }) {
           </div>
         </div>
 
-        {isEven ? (
-          <ProjectImgSection projectImageUrl={project.imgUrl} />
-        ) : (
-          ""
-        )}
+        {isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} /> : ""}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 function Projects() {
   return (
-    <div id="projects" className="flex text-white pt-2 min-h-[2400px] justify-center w-full bg-[#11071F]">
+    <div
+      id="projects"
+      className="flex text-white min-h-[2300px] justify-center w-full bg-[#11071F]"
+    >
       <div className="flex flex-col gap-[500px] justify-center items-center w-full">
         {projectsConfig.data.map((project, index) => {
           return <Project project={project} index={index} key={index} />;
