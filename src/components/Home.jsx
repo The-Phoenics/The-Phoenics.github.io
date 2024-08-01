@@ -1,5 +1,4 @@
 import { motion, AnimatePresence } from "framer-motion";
-import React from "react";
 
 function Home() {
   return (
@@ -20,7 +19,7 @@ function Home() {
         className="flex flex-col max-w-[1000px] tracking-wider gap-[15vh] w-full h-full items-center justify-center"
       >
         {/* above section */}
-        <div className="w-full flex items-center gap-12">
+        <div className="w-full flex items-center gap-12 md:flex-row flex-col">
           <div className="max-w-[250px] relative w-full mr-4">
             <AnimatePresence mode="wait">
               <motion.div
@@ -47,7 +46,7 @@ function Home() {
               </motion.div>
             </AnimatePresence>
 
-            <div className="absolute mix-blend-screen z-11 w-full min-w-[350px] min-h-[350px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[50%] h-full bg-avatarSmallGradient"></div>
+            <div className="absolute mix-blend-screen opacity-65 z-11 w-full min-w-[350px] min-h-[350px] left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-[50%] h-full bg-avatarSmallGradient"></div>
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -62,7 +61,7 @@ function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <h1 className="w-full font-Preahvihear absolute left-[320px] text-xl top-[-180px]">
+                <h1 className="w-full font-Preahvihear absolute md:left-[320px] left-[200px] text-xl top-[-180px] md:scale-[1] scale-[0.7]">
                   <div className="relative">
                     <img
                       src="/assets/arrow.png"
@@ -74,7 +73,7 @@ function Home() {
               </motion.div>
             </AnimatePresence>
           </div>
-          <div>
+          <div className="md:block hidden">
             <p className="[word-spacing:1px] mb-1">A Developer who</p>
             <h1 className="font-Preahvihear [word-spacing:1px] text-left text-[2.5em]">
               crafts seemless and
@@ -84,8 +83,8 @@ function Home() {
             </h1>
           </div>
         </div>
-        <div className="w-full text-left ml-6">
-          <p className="[word-spacing:1px] font-medium text-[1.1em]">
+        <div className="w-full text-left ml-6 md:mt-0 mt-10">
+          <p className="[word-spacing:1px] font-medium md:text-[1.1em]">
             A self-taught <i>Full Stack Developer</i> passionate about creating visually appealing
             and user-friendly websites and applications. With expertise in both front-end and
             back-end technologies, I deliver high-quality, dynamic, and responsive products that

@@ -12,18 +12,17 @@ const purpleTheme = {
   dark: ["#311b3a", "#512c62", "#7b3f8e", "#a05fbc", "#d4a8e2"],
 };
 
-
 function Skills() {
   return (
     <div className="w-screen h-screen flex flex-col items-center justify-center gap-[12%] pt-10 bg-[#11071F] text-white">
       <div className="flex flex-col gap-2">
-        <h1 className="font-Preahvihear font-bold text-center text-[3.5em]">Skills</h1>
-        <div className="max-w-[700px] p-6 flex items-center justify-center gap-3 flex-wrap">
+        <h1 className="font-Preahvihear font-bold text-center text-[3em] md:text-[3.5em]">Skills</h1>
+        <div className="max-w-[700px] md:p-6 p-2 flex items-center justify-center gap-1 md:gap-3 flex-wrap">
           {skillsConfig.data.map((skill, idx) => {
             return (
               <div
                 key={idx}
-                className="h-auto hover:cursor-pointer hover:scale-[1.1] transition-all duration-[300ms] aspect-square bg-[#251C31] p-5 rounded-[50%]"
+                className="h-auto hover:cursor-pointer hover:scale-[1.1] transition-all duration-[300ms] aspect-square bg-[#251C31] p-5 rounded-[50%] md:scale-100 scale-[0.8]"
               >
                 <img src={skill.imgUrl} />
               </div>

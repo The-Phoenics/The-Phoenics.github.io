@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdGlobe } from "react-icons/io";
 import { Link } from "react-router-dom";
@@ -7,13 +7,13 @@ import {  motion, useAnimation, useInView } from "framer-motion";
 
 function ProjectImgSection({ projectImageUrl }) {
   return (
-    <div className="w-full relative rounded-lg">
-      <div className="w-[90%] absolute z-20 aspect-[1/1] max-h-[400px] rounded-lg bg-[#2B0B3A]">
+    <div className="w-full relative rounded-lg hidden md:block">
+      <div className="w-[90%] absolute z-20 aspect-[1/1] max-h-[400px] rounded-lg bg-[#2B0B3A] shadow-md">
         {/* project image */}
         <div className="relative w-full h-full overflow-hidden rounded-lg">
           <img
             src={projectImageUrl}
-            className="absolute -bottom-10 -right-10 ml-20 w-full h-full object-cover rounded-lg hover:cursor-pointer transition-all duration-700 hover:right-0 hover:bottom-0 hover:scale-110"
+            className="absolute -bottom-10 shadow-2xl shadow-[#11071F] -right-10 ml-20 w-full h-full object-cover rounded-lg hover:cursor-pointer transition-all duration-700 hover:right-0 hover:bottom-0 hover:scale-100"
           />
         </div>
       </div>
@@ -50,7 +50,7 @@ function Project({ project, index }) {
         duration: 1
       }}
     >
-      <div className="flex mt-[0vh] w-full">
+      <div className="flex mt-[0vh] w-full md:scale-[1] scale-[0.8]">
         {!isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} /> : ""}
 
         <div className="w-full relative mt-20">
@@ -108,7 +108,7 @@ function Projects() {
       id="projects"
       className="flex text-white min-h-[2300px] justify-center w-full bg-[#11071F]"
     >
-      <div className="flex flex-col gap-[500px] justify-center items-center w-full">
+      <div className="flex flex-col gap-[300px] md:gap-[500px] justify-center items-center w-full">
         {projectsConfig.data.map((project, index) => {
           return <Project project={project} index={index} key={index} />;
         })}
