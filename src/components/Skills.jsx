@@ -14,7 +14,7 @@ const purpleTheme = {
 
 function Skills() {
   return (
-    <div className="w-screen h-screen flex flex-col items-center justify-center gap-[12%] pt-10 bg-[#11071F] text-white">
+    <div className="w-screen h-screen flex flex-col items-center justify-center gap-[12%] pt-20 md:pt-10 bg-[#11071F] text-white">
       <div className="flex flex-col gap-2">
         <h1 className="font-Preahvihear font-bold text-center text-[3em] md:text-[3.5em]">Skills</h1>
         <div className="max-w-[700px] md:p-6 p-2 flex items-center justify-center gap-1 md:gap-3 flex-wrap">

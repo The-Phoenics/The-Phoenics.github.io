@@ -1,11 +1,11 @@
 {
   "data": [
     {
-      "name": "Key Racer",
-      "imgUrl": "/assets/key-racer.png",
-      "description": "KeyRacer is a simple user-friendly typing practise web application designed to help you improve your typing speed and accuracy in a fun and interactive way",
-      "githubUrl": "https://github.com/The-Phoenics/Key-Racer",
-      "liveUrl": "https://key-racer-app.netlify.app"
+      "name": "Luffytype",
+      "imgUrl": "/assets/luffytype.png",
+      "description": "Luffytype is a simple user-friendly typing practise web app designed to help you improve your typing speed and accuracy in a fun and interactive way",
+      "githubUrl": "https://github.com/The-Phoenics/Luffytype",
+      "liveUrl": "https://luffytype.vercel.app"
     },
     {
       "name": "Space Shooter",

@@ -20,7 +20,7 @@ function Home() {
       >
         {/* above section */}
         <div className="w-full flex items-center gap-12 md:flex-row flex-col">
-          <div className="max-w-[250px] relative w-full mr-4">
+          <div className="max-w-[250px] relative w-full md:mr-4 md:mt-0 mr-20 mt-[20vw]">
             <AnimatePresence mode="wait">
               <motion.div
                 initial={{ y: 8, opacity: 1 }}
@@ -61,7 +61,7 @@ function Home() {
                   ease: "easeInOut",
                 }}
               >
-                <h1 className="w-full font-Preahvihear absolute md:left-[320px] left-[200px] text-xl top-[-180px] md:scale-[1] scale-[0.7]">
+                <h1 className="w-full font-Preahvihear absolute md:left-[320px] left-[170px] text-xl top-[-185px] md:scale-[1] scale-[0.7]">
                   <div className="relative">
                     <img
                       src="/assets/arrow.png"

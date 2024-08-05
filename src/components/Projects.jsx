@@ -1,11 +1,14 @@
-import { useEffect, useRef } from "react";
+import { isValidElement, useEffect, useRef } from "react";
 import { FaGithub } from "react-icons/fa";
 import { IoMdGlobe } from "react-icons/io";
 import { Link } from "react-router-dom";
 import projectsConfig from "../config/projectsConfig.json";
 import {  motion, useAnimation, useInView } from "framer-motion";
 
-function ProjectImgSection({ projectImageUrl }) {
+function ProjectImgSection({ projectImageUrl, isEven }) {
+
+  const imageOffsetStyling = isEven ? "-right-8 -bottom-6 hover:right-0 hover:bottom-0" : "right-8 top-6 hover:right-0 hover:top-0";
+
   return (
     <div className="w-full relative rounded-lg hidden md:block">
       <div className="w-[90%] absolute z-20 aspect-[1/1] max-h-[400px] rounded-lg bg-[#2B0B3A] shadow-md">
@@ -13,7 +16,7 @@ function ProjectImgSection({ projectImageUrl }) {
         <div className="relative w-full h-full overflow-hidden rounded-lg">
           <img
             src={projectImageUrl}
-            className="absolute -bottom-10 shadow-2xl shadow-[#11071F] -right-10 ml-20 w-full h-full object-cover rounded-lg hover:cursor-pointer transition-all duration-700 hover:right-0 hover:bottom-0 hover:scale-100"
+            className={`absolute ${imageOffsetStyling} shadow-2xl shadow-[#11071F] ml-20 w-full h-full object-cover rounded-lg hover:cursor-pointer transition-all duration-700 hover:scale-100`}
           />
         </div>
       </div>
@@ -96,7 +99,7 @@ function Project({ project, index }) {
           </div>
         </div>
 
-        {isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} /> : ""}
+        {isEven ? <ProjectImgSection projectImageUrl={project.imgUrl} isEven={isEven} /> : ""}
       </div>
     </motion.div>
   );
