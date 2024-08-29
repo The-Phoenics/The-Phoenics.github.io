@@ -84,11 +84,8 @@ function Home() {
           </div>
         </div>
         <div className="w-full text-left ml-6 md:mt-0 mt-10">
-          <p className="[word-spacing:1px] font-medium md:text-[1.1em]">
-            A self-taught <i>Full Stack Developer</i> passionate about creating visually appealing
-            and user-friendly websites and applications. With expertise in both front-end and
-            back-end technologies, I deliver high-quality, dynamic, and responsive products that
-            exceed client expectations.
+          <p className="[word-spacing:2px] leading-[1.8vw] font-medium md:text-[1.1em]">
+            I'm a self-taught <i>Full Stack Developer</i> who loves making websites and apps that look great and are easy to use. I handle both the front-end and back-end, creating high-quality, dynamic, and responsive solutions that go beyond client expectations.
           </p>
         </div>
       </motion.div>

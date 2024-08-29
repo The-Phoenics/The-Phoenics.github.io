@@ -56,23 +56,28 @@ function Contact() {
         </div>
         <div className="w-full flex gap-5">
           <Link
+            target="_blank"
             to={"https://github.com/The-Phoenics"}
-            className="hover:scale-[1.2] duration-500 transition-all"
+            className="scale-[1.1] duration-500 transition-all"
           >
             <FaGithub />
           </Link>
           <Link
+            target="_blank"
             to={"https://x.com/phoenics_x"}
-            className="hover:scale-[1.2] duration-500 transition-all"
+            className="scale-[1.1] duration-500 transition-all"
           >
             <IoLogoTwitter />
           </Link>
+          {/*
           <Link
+            target="_blank"
             to={"https://discordapp.com/users/856245732294000660"}
             className="hover:scale-[1.2] duration-500 transition-all"
           >
             <FaDiscord />
           </Link>
+          */}
         </div>
       </motion.div>
     </div>

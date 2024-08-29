@@ -82,13 +82,19 @@ function Project({ project, index }) {
                   !isEven ? "items-end justify-end right-0" : ""
                 }`}
               >
+                {
+                project.liveUrl ?
                 <Link
+                  target="_blank"
                   to={project.liveUrl}
                   className="scale-[1.4] hover:scale-[1.5] duration-500 transition-all"
                 >
                   <IoMdGlobe />
                 </Link>
+                : ""
+                }
                 <Link
+                  target="_blank"
                   to={project.githubUrl}
                   className="scale-[1.3] hover:scale-[1.4] duration-500 transition-all"
                 >
@@ -109,7 +115,7 @@ function Projects() {
   return (
     <div
       id="projects"
-      className="flex text-white min-h-[2300px] justify-center w-full bg-[#11071F]"
+      className="flex text-white min-h-[3000px] justify-center w-full bg-[#11071F]"
     >
       <div className="flex flex-col gap-[300px] md:gap-[500px] justify-center items-center w-full">
         {projectsConfig.data.map((project, index) => {
